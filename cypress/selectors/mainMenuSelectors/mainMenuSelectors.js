@@ -15,4 +15,11 @@ export const mainMenuSelectors = {
   maintenance: 'a[href*="maintenance/viewMaintenanceModule"]',
   claim: 'a[href*="claim/viewClaimModule"]',
   buzz: 'a[href*="buzz/viewBuzz"]',
+
+  searchContainer: '.oxd-main-menu-search',
+
+  searchInput: '.oxd-main-menu-search input',
+
+  // searchResultByName: (moduleName) =>
+  //   `.oxd-main-menu-item--name:contains("${moduleName}")`
 }
