@@ -1,3 +1,14 @@
+Cypress.Commands.add('login', (
+  username = Cypress.env('username'),
+  password = Cypress.env('password')
+) => {
+  cy.visit('/web/index.php/auth/login')
+
+  cy.get('input[name="username"]',  { timeout: 10000 }).type(username, {delay: 100})
+  cy.get('input[name="password"]').type(password, {delay: 100})
+  cy.get('button[type="submit"]').click()
+})
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
